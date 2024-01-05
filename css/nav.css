@@ -1,0 +1,115 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 50px);
+    height: 80px;
+    z-index: 1000;
+
+    border-bottom: 1px solid white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+}
+
+.right-side {
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+}
+
+.right-side > .container {
+    border-left: 1px solid white;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container.listen {
+    width: 170px;
+    justify-content: center;
+}
+
+.container.menu {
+    width: 120px;
+}
+
+.listen-text {
+    color: pink;
+    font-size: 16pt;
+    margin-left: 4px;
+}
+
+.listen-icon {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.listen-span {
+    width: 4px;
+    height: 100%;
+    background-color: pink;
+    content: '';
+}
+
+.listen-span.obj1 {
+    animation: bounce 0.5s linear infinite alternate;
+}
+
+.listen-span.obj2 {
+    animation: bounce2 0.5s linear infinite alternate;
+    animation-delay: 0.5s;
+    height: 60%;
+}
+
+.listen-span.obj3 {
+    animation: bounce 0.5s linear infinite alternate;
+    animation-delay: 0.7s;
+}
+
+.menu-text {
+    font-size: 16pt;
+    color: white;
+}
+
+@keyframes bounce {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 10%;
+    }
+}
+
+@keyframes bounce2 {
+    from {
+        height: 60%;
+    }
+    to {
+        height: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding-left: 10px;
+        width: calc(100% - 10px);
+    }
+
+    .container.listen {
+        width: 120px;
+    }
+
+    .container.menu {
+        width: 100px;
+    }
+
+}
