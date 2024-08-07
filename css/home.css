@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: "Inter", sans-serif;
     cursor: none;
 }
 
@@ -145,6 +147,161 @@ body {
     color: black;
 }
 
+.new-releases-container {
+    background-color: #0F0E0E;
+    width: calc(100% - 100px);
+    min-height: 200px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.releases-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+}
+
+.releases-buttons > p {
+    font-size: 38pt;
+    font-weight: 400;
+    color: white;
+}
+
+.arrow-left, .arrow-right {
+    width: 45px;
+    color: white;
+    margin-left: 15px;
+}
+
+.arrow-left {
+    transform: rotate(180deg);
+}
+
+.albums-carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 45px;
+    overflow: hidden;
+    scroll-behavior: smooth;    
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+    position: relative;
+}
+
+
+
+.album-photo {
+    width: 650px;
+    height: 650px;
+    transition: 200ms;
+}
+
+.album-photo:hover {
+    border-radius: 30px;
+}
+
+.album-text {
+    color: white;
+    max-width: 630px;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.orange {
+    color: #D98100;
+}
+
+.photo-hover {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    background-color: #D98100;
+    width: 650px;
+    height: 650px;
+    border-radius: 30px;
+    opacity: 0;
+    transition: 250ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo-hover:hover{
+    opacity: 0.9;
+}
+
+.album:hover .album-photo {
+    border-radius: 30px;
+}
+
+.album:hover .photo-hover {
+    border-radius: 30px;
+}
+
+.photo-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.date {
+    font-size: 22px;
+    color: black;
+}
+
+.name-text {
+    font-size: 48px;
+    color: black;
+    margin-top: 20px;
+}
+
+.stream-now p {
+    font-size: 22px;
+    color: black;
+}
+
+.stream-now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    width: 100%;
+    height: 180px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: 250ms;
+}
+
+.stream-now:hover {
+    background-color: white;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
 @media screen and (max-width: 900px) {
     .centered-text > p {
         font-size: 120pt;
@@ -162,5 +319,33 @@ body {
 
     .make-noise-div {
         transform: rotate(-10deg);
+    }
+
+    .album-photo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .photo-hover {
+        width: 300px;
+        height: 300px;
+    }
+
+    .releases-buttons p{
+        font-size: 25px;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 40px;
+        margin-left: 10px;
+    }
+
+    .releases-buttons {
+        justify-content: space-between;
+    }
+
+    .new-releases-container {
+        padding: 15px;
+        width: calc(100% - 30px);
     }
 }

@@ -53,3 +53,36 @@ function textSwitcher () {
     let rand = Math.floor(Math.random() * allText.length);
     WriteText(allText[rand]);
 }
+
+const carousel = document.querySelector('.albums-carousel');
+const items = document.querySelectorAll('.album');
+const width = document.querySelector('.album').clientWidth;
+let currIndex = 1;
+const totalItems = 10;
+const slideInterval = 4000; // 5 seconds
+
+
+function nextSlide() {
+    currIndex++;
+    if (currIndex >= totalItems - 1) {
+        carousel.scrollLeft = 0;
+        currIndex = 1;
+        
+    } else {
+        carousel.scrollLeft += (width + 20);
+    }
+}
+
+function prevSlide() {
+    currIndex--;
+    if (currIndex <= 0) { 
+        carousel.scrollLeft = (totalItems - 2) * (width + 20);
+        currIndex = totalItems - 2;
+    } else {
+        carousel.scrollLeft -= (width + 20);
+    }
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, slideInterval);
+
