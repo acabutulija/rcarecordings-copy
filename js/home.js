@@ -83,6 +83,33 @@ function prevSlide() {
     }
 }
 
+const carousel2 = document.querySelector('.curated-carousel');
+const items2 = document.querySelectorAll('.news-article');
+const width2 = document.querySelector('.news-article').clientWidth;
+let currIndex2 = 1;
+const totalItems2 = 5;
+
+function nextSlide2() {
+    currIndex2++;
+    if (currIndex2 >= totalItems2 - 1) {
+        carousel2.scrollLeft = 0;
+        currIndex2 = 1;
+        
+    } else {
+        carousel2.scrollLeft += (width2 + 20);
+    }
+}
+
+function prevSlide2() {
+    currIndex2--;
+    if (currIndex2 <= 0) { 
+        carousel2.scrollLeft = (totalItems2 - 2) * (width2 + 20);
+        currIndex2 = totalItems2 - 2;
+    } else {
+        carousel2.scrollLeft -= (width2 + 20);
+    }
+}
+
 // Auto slide every 5 seconds
 setInterval(nextSlide, slideInterval);
-
+setInterval(nextSlide2, slideInterval);
