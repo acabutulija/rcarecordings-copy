@@ -605,6 +605,88 @@ body {
     color: white;
 }
 
+footer {
+    background-color: #0F0E0E;
+    padding: 50px;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.links-left {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+.links-left ul {
+    margin-right: 200px;
+}
+
+.links-left ul li {
+    font-size: 30px;
+    color: white;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.bottom-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.upper-privacy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.upper-privacy > a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.lower-privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.lower-privacy p {
+    font-size: 14px;
+    color: #828282;
+    margin: 0;
+}
+
+.lower-privacy > p > a {
+    color: #B0A580;
+}
+
+.bottom-links img {
+    width: 590px;
+    aspect-ratio: auto;
+}
+
 @media screen and (max-width: 900px) {
     .centered-text > p {
         font-size: 120pt;
@@ -694,6 +776,29 @@ body {
     .news-article .img-holder img {
         width: 330px;
         height: 330px;
+    }
+
+    .links-left {
+        flex-direction: column;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+    }
+
+    .upper-privacy {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .upper-privacy a {
+        margin-top: 10px;
+    }
+
+    .bottom-links img {
+        width: 300px;
+        margin-top: 20px;
     }
 
 }
