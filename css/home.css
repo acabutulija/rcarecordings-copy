@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     margin: 0;
@@ -301,6 +302,147 @@ body {
     align-items: center;
     margin-left: 20px;
 }
+
+.music-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.new-music-videos-text {
+    background-color: #0F0E0E;
+    border-top: 1px solid white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.new-music-videos-text span {
+    font-size: 24px;
+    color: white;
+    display: inline-block;
+    padding-left: 0;
+    animation: marquee 15s linear infinite;
+    text-transform: uppercase;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+}
+
+.video-div {
+    height: 550px;
+    width: 100%;
+    position: relative;
+}
+
+.video-div video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: 150ms;
+}
+
+.clr-pink {
+    background-color: #ffa7bd;
+}
+
+.clr-orange {
+    background-color: #D98100;
+}
+
+.clr-red {
+    background-color: #ff4a23;
+}
+
+.video-div:hover .video-cover {
+    opacity: 0;
+}
+
+.video-text-div {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    animation: marquee-rtl 25s linear infinite; 
+}
+
+.video-text-div .text-holder p {
+    font-size: 30vmin;
+    transition: 200ms;
+    font-family: Panama;
+    text-wrap: nowrap;
+    
+    
+}
+
+.song-name {
+    font-family: "Bebas Neue", sans-serif;
+    text-wrap: nowrap;
+    max-height: 100%;
+    font-size: 30vmin;
+    transition: 200ms;
+}
+
+.video-div:hover .video-text-div .text-holder p, .video-div:hover .song-name {
+    color: white;
+}
+
+.watch-now {
+    background-color: #FCFDF8;
+    transition: 200ms ease;
+    font-size: 75px;
+    color: black;
+    padding: 20px;
+    border-radius: 10%;
+    border: none;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.watch-now:hover {
+    background-color: #B0A580;
+}
+
+@keyframes marquee-rtl {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
 @media screen and (max-width: 900px) {
     .centered-text > p {
